@@ -4,234 +4,348 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Responsive Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <style>
+        body {
+            background-color: rgba(201, 42, 233, 0.144);
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navbar Styling */
         .s {
             padding: 30px;
             width: 100%;
             top: 0;
             text-align: center;
             background-color: aqua;
-            position:fixed;
-            /* margin-top: 50px; */
-            /* margin-left: 50%; */
-            
-
-
-
+            position: fixed;
+            z-index: 100;
         }
 
         .s a {
-
-            padding: 40px;
+            padding: 20px;
             color: black;
             text-decoration: none;
             font-size: 20px;
         }
-        .s a:hover{
-            background-color: white;
-           padding: 30px;
-           border: 2px solid red;
-           border-radius: 30%;
-        }
 
-        .u {
-            
+        .s a:hover {
+            background-color: white;
             padding: 10px;
-            text-align: center;
-            width: 80%;
-            background-color: white;
-            margin: auto;
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-
+            border: 2px solid red;
+            border-radius: 30%;
         }
-        
+
+        /* Home Section */
         .home {
-            margin-top: 100px;
-
+            margin-top: 120px;
+            text-align: center;
         }
 
+        .home h1 {
+            font-size: 3em;
+        }
+
+        /* About Section */
         #m {
             width: 80%;
             background-color: white;
             margin: auto;
-
-
+            padding: 20px;
         }
 
         #m img {
             border-radius: 50%;
             height: 7em;
-            margin-left: 30px;
-        }
-
-        .n img {
-            border-radius: 50%;
-            height: 4em;
-            margin: 20px;
+            margin-right: 20px;
         }
 
         .ss {
             display: flex;
-        }
-
-        .ss img {
-            margin-bottom: 20px;
+            align-items: center;
         }
 
         .ss p {
+            font-size: 1.2em;
+        }
+
+        /* Skills Section */
+        .skills {
+            margin-top: 20px;
+        }
+
+        .skills table {
+            width: 50%;
+            margin-left: 140px;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .skills th,
+        .skills td {
+            border: 1px solid #ddd;
             padding: 10px;
-            margin-top: 35px;
-            font-size: 20px;
+            text-align: left;
         }
 
-        .lm {
-            width: 80%;
-            background-color: white;
-            margin: auto;
-
-        }
-
-        .kk {
-            margin-left: 25em;
-        }
-
-        .sum {
+        /* Projects Section */
+        .projets .sum {
             width: 80%;
             background-color: white;
             margin: auto;
             display: flex;
-
+            flex-wrap: wrap;
         }
 
-        .sum p {
-            width: 10em;
+        .projets .sum p {
+            width: 250px;
             background-color: rgba(123, 122, 122, 0.366);
-            font-size: 20px;
+            font-size: 18px;
             border-radius: 10px;
-            margin-left: 20px;
-        }
-        .sum p img{
-            border-radius: 50px;
+            margin: 10px;
+            text-align: center;
         }
 
-        .skills,
-        .projets {
-            margin-top: 20px;
+        .projets .sum p img {
+            border-radius: 10px;
+            width: 100%;
         }
-        .ut{
+
+        /* Contact Section */
+        .ut {
             width: 80%;
             background-color: white;
             margin: auto;
-            
+            margin-top: 30px;
+            padding: 20px;
+        }
 
-        }
-        .ut input{
+        .ut input {
+            width: 100%;
             height: 30px;
+            margin-bottom: 10px;
         }
-        .ut label{
-            font-size: 25px;
-        }
-        .ut button{
-        
-            margin-top: 10px;
+
+        .ut button {
+            width: 100%;
+            padding: 10px;
             font-size: 20px;
             background-color: rgb(255, 0, 234);
+            border: none;
+            color: white;
         }
-        .oi{
+
+        /* Footer */
+        .oi {
             padding: 30px;
             width: 100%;
-            top: 0;
             text-align: center;
             background-color: aqua;
+            margin-top: 20px;
+        }
+
+        .social-Links {
+            padding: 25px;
+        }
+
+        .social-Links a {
+            padding: 30px;
+            font-size: 30px;
+        }
+        .skills table{
+                background-color: white;
+                width: 82%;
+            }
+
+        /* Media Queries for Responsiveness */
+        @media screen and (max-width: 768px) {
+
+            /* Smaller screens (Tablets) */
+            .ss {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .skills table {
+                margin-left: 15px;
+                width: 90%;
+                height: 200px;
+                background-color: white;
+
+            }
+
+            .p img {
+                width: 50px;
+            }
+
+            .ss img {
+                margin-bottom: 20px;
+            }
+
+            .home h1 {
+                font-size: 2.5em;
+            }
+
+            .projets .sum {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .s {
+                margin-left: -50px;
+            }
+
+            .projets {
+                width: 350px;
+                margin-left: 25px;
+                margin-top: 45px;
+            }
+
+            .projets h2 {
+                margin-left: -25px;
+            }
+
+            .social-Links {
+                margin-left: -65px;
+                font-size: 2px;
+                padding: 5px;
+            }
+
+            footer {
+                margin-left: -7px;
+            }
+
 
         }
 
+        @media screen and (max-width: 576px) {
+
+            /* Extra small devices (Phones) */
+            .s a {
+                font-size: 16px;
+                padding: 10px;
+            }
+          
+
+            .home h1 {
+                font-size: 2em;
+            }
+
+            .skills table {
+                font-size: 14px;
+            }
+
+            .skills th,
+            .skills td {
+                padding: 8px;
+            }
+
+            .ut input {
+                font-size: 16px;
+            }
+
+            .ut button {
+                font-size: 18px;
+            }
+        }
     </style>
 </head>
 
-<body style="background-color: rgba(201, 42, 233, 0.144);">
+<body>
+    <!-- Navbar Section -->
     <nav>
         <div class="s">
-            <a href="">Home</a>
+            <a href="#home">Home</a>
             <a href="#m">About</a>
-            <a href="">Skills</a>
-            <a href="#Projets">Projets</a>
-            <a href="#Contact Me">Contact</a>
+            <a href="#skills">Skills</a>
+            <a href="#Projets">Projects</a>
+            <a href="#contact">Contact</a>
         </div>
     </nav>
-    <div class="home">
+
+    <!-- Home Section -->
+    <div class="home" id="home">
         <div class="u">
             <h1>Welcome to my Portfolio</h1>
         </div>
     </div>
-    <div id="m">
 
+    <!-- About Section -->
+    <div id="m">
         <h2>About me</h2>
         <div class="ss">
-            <img src="./PASSPORT SIZE.IMG.jpg" alt="">
-            <p>Hello! My Name is M.Sumanth Reddy I Recently Completed my B.tech in Sree Dattha Group of Institution</p>
+            <img src="./PASSPORT SIZE.IMG.jpg" alt="Profile Picture">
+            <p>Hello! My Name is <b>M.Sumanth Reddy</b> Enthusiastic Computer Science graduate with strong skills in C,
+                Java, SQL, and front-end technologies like HTML and CSS. Experienced in developing web pages and basic
+                software applications through academic projects.</p>
         </div>
     </div>
-    <div class="skills">
+
+    <!-- Skills Section -->
+    <div class="skills" id="skills">
         <div class="lm">
             <h2>My Skills</h2>
-            <div class="kk">
-                <table border="1" cellpadding="20px" cellspacing="1">
-                    <thead>
-                        <!-- <tr>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                    </tr> -->
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th>Web Technologies</th>
-                            <td>HTML, CSS, JAVASCRIPT, REACT</td>
-                        <tr>
-                            <th>Programming</th>
-                            <td>C, C++ , JAVA , SQL </td>
-                        <tr>
-                            <th>Tools & OS </th>
-                            <td>Git , Github , Vscode</td>
-                        </tr>
-                        </tr>
-
-                        </tr>
-
-                    </tbody>
-
-
-                </table>
-            </div>
-
+            <table>
+                <thead>
+                    <!-- Optional Table Headers -->
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>Web Technologies</th>
+                        <td>HTML, CSS, JavaScript, React</td>
+                    </tr>
+                    <tr>
+                        <th> Basic Programming</th>
+                        <td>C, C++, Java, SQL</td>
+                    </tr>
+                    <tr>
+                        <th>Tools & OS</th>
+                        <td>Git, GitHub, VSCode</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
-    <div class="projets">
+
+    <!-- Projects Section -->
+    <div class="projets" id="Projets">
+        <h2>Projects</h2>
         <div class="sum">
-            <h2>Projets</h2>
-           
-            <p> <img src="https://www.globalsign.com/application/files/7416/3763/0034/General_Banner_WhatisIOT_4_APAC_2021_11_22.jpg" width="200px" alt="">The Interconnected Revolution</p>
-            <p> <img src="https://miro.medium.com/v2/resize:fit:640/0*_6WEDnZubsQfTMlY.png" width="200px">The Advanced Neural Network For Detecting Fraud In Online Loan Applications</p>
+
+            <p><img src="https://www.globalsign.com/application/files/7416/3763/0034/General_Banner_WhatisIOT_4_APAC_2021_11_22.jpg"
+                    alt="IOT Project">
+                The Interconnected Revolution
+            </p>
+            <p><img src="https://miro.medium.com/v2/resize:fit:640/0*_6WEDnZubsQfTMlY.png" alt="Neural Network Project">
+                Advanced Neural Network for Fraud Detection
+            </p>
         </div>
     </div>
-    <div class="ut">
+
+
+    <!-- Contact Section -->
+    <div class="ut" id="contact">
         <h2>Contact Me</h2>
-        <label for="" >Name:</label><br>
-        <input type ="text" size="155" height="50px">
-        <br>
-        <label for="">Email:</label> <br>
-        <input type="email" size="155"> <br>
-        <label for="">Phone Number:</label> <br>
-        <input type="email" size="155">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" size="155" height="50px"><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" size="155"><br>
+        <label for="phone">Phone Number:</label><br>
+        <input type="text" id="phone" size="155"><br>
         <center><button>Send Message</button></center>
     </div>
+
+    <!-- Footer Section -->
     <footer class="oi">
-        @my Portfolio
+        @Contact me more on
+        <div class="social-Links">
+            <a href="https://github.com/Sumanth-9515"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.google.co.in/"> <i class="fa-brands fa-google"></i></a>
+            <a href="https://www.linkedin.com/feed/"> <i class="fa-brands fa-linkedin"></i> </a>
+            <a href="tel:9515174064"> <i class="fa-solid fa-mobile"></i></a>
+        </div>
     </footer>
-
-
 
 </body>
 
